@@ -29,8 +29,13 @@ const setThemeForm = (change=false) => {
                     </div>
                 </div>
             </div>
-        `
+        `;
+        // Выбераю все div, кроме формы дефолтной темы и засветляю их
+        document.querySelectorAll('div').forEach(item => item.style.opacity = '0.5');
+        form_block.style.opacity = '1';
+        
         document.body.append(form_block);
+
         // Установление дефолтной темы через кнопки
         setDefultThemeButtons(form_block);
     }

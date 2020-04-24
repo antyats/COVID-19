@@ -7,9 +7,12 @@ const setDefultThemeButtons = (modal) => {
         localStorage.setItem('theme', theme);
         // Удаляет окно настройки темы
         modal.remove();
+        // Удаляет засветление других div
+        document.querySelectorAll('div').forEach(item => item.style.opacity = '1');
         // Меняет тему на выбранную, как дефотную
         document.documentElement.setAttribute('data-theme', theme);
     }
+
     btn_light.addEventListener('click', () => setThemeToMemory('light'));
     btn_dark.addEventListener('click', () => setThemeToMemory('dark'));
 
