@@ -1,0 +1,9 @@
+@import '../utils/fonts/fonts-setting/NunitoSans.scss';
+
+.header {
+    height: 7rem;
+    display: flex;
+    border-bottom: 2px solid var(--primary-color);
+    border-radius: 5px;
+    font-family: 'Nunito Sans', sans-serif;
+}

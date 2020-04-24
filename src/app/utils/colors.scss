@@ -1,0 +1,24 @@
+:root {
+    // BASE
+    --primary-color: #3f72af;
+    --secondary-color: #035aa6;
+    --body-color: #eaeaea;
+    --text-color: #ffffff;
+
+    //INPUT
+    --input-color: #dbe2ef;
+    --input-color-lighter: #c8d6f0;
+    --input-checkbox-color: #3f72af;
+}
+
+[data-theme="dark"] {
+    --primary-color: #ffac41;
+    --secondary-color: #222831;
+    --body-color: #222831;
+    --text-color: #000000;
+
+    //INPUT
+    --input-color: #dbe2ef;
+    --input-color-lighter: #c8d6f0;
+    --input-checkbox-color: #323232;
+}

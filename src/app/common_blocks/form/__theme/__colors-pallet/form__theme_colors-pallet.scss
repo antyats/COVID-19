@@ -1,0 +1,57 @@
+.form__theme_colors-pallet {
+    width: 20rem;
+    display: block;
+    color: #ffffff;
+
+    &-light {
+        display: flex;
+        flex-direction: column;
+        border: 3px solid #ffffff;
+
+        &-row {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 1;
+            padding: 2rem;
+
+            &-1 {
+                background-color: #3f72af;
+            }
+
+            &-2 {
+                background-color: #035aa6;
+            }
+
+            &-3 {
+                background-color: #c8d6f0;
+            }
+        }
+    }
+
+    &-dark {
+        display: flex;
+        flex-direction: column;
+        border: 3px solid #000000;
+
+        &-row {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 1;
+            padding: 2rem;
+
+            &-1 {
+                background-color: #ffac41;
+            }
+
+            &-2 {
+                background-color: #222831;
+            }
+
+            &-3 {
+                background-color: #323232;
+            }
+        }
+    }
+}

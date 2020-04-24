@@ -1,0 +1,17 @@
+.input__type_checkbox {
+    display: none;
+
+    &-switcher {
+        width: 100%;
+        padding: 1rem;
+        background-color: var(--input-checkbox-color);
+        user-select: none;
+        cursor: pointer;
+        border-radius: 2px;
+
+        & > img {
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+}
