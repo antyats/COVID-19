@@ -1,3 +1,5 @@
+import { doBackgroundUsual } from '../../../common_blocks/scripts/backgroundOpacityChange';
+
 // Устанавливает тему, в окне, передающемся в аргументе, которая будет появляться 1-ой 
 const setDefultThemeButtons = (modal) => {
     const btn_light = document.querySelector('.button__form-light'),
@@ -8,7 +10,7 @@ const setDefultThemeButtons = (modal) => {
         // Удаляет окно настройки темы
         modal.remove();
         // Удаляет засветление других div
-        document.querySelectorAll('div').forEach(item => item.style.opacity = '1');
+        doBackgroundUsual();
         // Меняет тему на выбранную, как дефотную
         document.documentElement.setAttribute('data-theme', theme);
     }

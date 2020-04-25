@@ -8,8 +8,10 @@ import '../app/utils/shadows.scss';
 import '../app/common_blocks/form/form.scss';
 import '../app/common_blocks/form/__theme/form__theme.scss';
 import '../app/common_blocks/form/__theme/__colors-pallet/form__theme_colors-pallet.scss';
+import '../app/common_blocks/form/__search/form__search.scss';
+import '../app/common_blocks/form/__search/__search_dropdown/form__search_dropdown.scss';
 import '../app/common_blocks/form/__theme/form__theme';
-
+import '../app/common_blocks/form/__search/form__search';
 
 //BUTTONS
 import '../app/common_blocks/button/button.scss';

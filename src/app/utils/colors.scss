@@ -9,16 +9,27 @@
     --input-color: #dbe2ef;
     --input-color-lighter: #c8d6f0;
     --input-checkbox-color: #3f72af;
+
+    //FORM
+    --search-color: #000000;
+    --form-search-color: #035aa6;
+    --form-list-hover-border: #ff7c7c;
 }
 
 [data-theme="dark"] {
+    //BASE
     --primary-color: #ffac41;
     --secondary-color: #222831;
     --body-color: #222831;
     --text-color: #000000;
 
     //INPUT
-    --input-color: #dbe2ef;
+    --input-color: #ffffff;
     --input-color-lighter: #c8d6f0;
     --input-checkbox-color: #323232;
+
+    //FORM
+    --search-color: #ffffff;
+    --form-search-color: #ffac41;
+    --form-list-hover-border: #222831;
 }

@@ -1,6 +1,6 @@
 // FUNCTIONS
 import setDefultThemeButtons from '../../../header/__switcher/header__switcher_buttons/header__block_switcher-buttons';
-
+import { doBackgroundUsual } from '../../scripts/backgroundOpacityChange';
 // При 1-ом открытии проверяет наличии дефолтной темы в LocalStorage,
 // если не находит, то создает окно выбора темы и запускает функцию установки дефолтной темы.
 // И запускает установку дефолтной темы, если в параметр функции передано истиное значение change.
@@ -8,9 +8,9 @@ const setThemeForm = (change=false) => {
     // В LocalStorage отстутсвует дефолтная тема
     if (!localStorage.getItem('theme') || change) {
         const form_block = document.createElement('div');
+        form_block.classList.add('form');
         form_block.innerHTML = `
-            <div class="form">
-                <div class="form form__theme">
+                <div class="form__theme">
                     <div class="form__theme_light">
                         <div class="form__theme_colors-pallet form__theme_colors-pallet-light">
                             <span class="form__theme_colors-pallet-light-row form__theme_colors-pallet-light-row-1">YELLOW</span>
@@ -28,14 +28,13 @@ const setThemeForm = (change=false) => {
                         <button class="button button__form button__form-dark">DARK</button>
                     </div>
                 </div>
-            </div>
         `;
         // Выбераю все div, кроме формы дефолтной темы и засветляю их
         document.querySelectorAll('div').forEach(item => item.style.opacity = '0.5');
         form_block.style.opacity = '1';
         
         document.body.append(form_block);
-
+        
         // Установление дефолтной темы через кнопки
         setDefultThemeButtons(form_block);
     }

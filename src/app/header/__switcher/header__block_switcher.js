@@ -1,5 +1,6 @@
 // FUNCTIONS
 import setThemeForm from '../../common_blocks/form/__theme/form__theme';
+import { doBackgroundUsual } from '../../common_blocks/scripts/backgroundOpacityChange';
 
 // IMAGES
 import sun from '../../utils/images/sun.png';
@@ -39,6 +40,7 @@ const setTheme = (trigger, light_img, dark_img) => {
     // По клику на ПКМ открывается контекстное меню
     trig.addEventListener('contextmenu', function(e) {
         e.preventDefault();
+        e.stopPropagation();
         const changeDefault = document.createElement('div');
         changeDefault.classList.add('context-menu');
         changeDefault.innerHTML = `
@@ -54,8 +56,8 @@ const setTheme = (trigger, light_img, dark_img) => {
             changeDefault.remove();
         })
         // Если нажать не на контекстное меню, оно удаляется
-        window.addEventListener('click', function(e) {
-            if (!e.target.classList.contains('context-menu')) {
+        window.addEventListener('click', function(event) {
+            if (!event.target.classList.contains('context-menu')) {
                 changeDefault.remove();
             } 
         });
