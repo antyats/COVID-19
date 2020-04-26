@@ -14,6 +14,10 @@
     --search-color: #000000;
     --form-search-color: #035aa6;
     --form-list-hover-border: #ff7c7c;
+
+    // MAIN
+    --stats-border-color: #3f72af;
+    --stats-text-color: #ffffff;
 }
 
 [data-theme="dark"] {
@@ -32,4 +36,8 @@
     --search-color: #ffffff;
     --form-search-color: #ffac41;
     --form-list-hover-border: #222831;
+
+    //MAIN
+    --stats-border-color: #ffac41;
+    --stats-text-color: #ffac41;
 }

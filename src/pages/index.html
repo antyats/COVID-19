@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=a712e72d-d189-4c89-a4e8-4e14a748b2c4&lang=ru_RU" type="text/javascript"></script>
     <title>Covid-19</title>
 </head>
 <body>
-
     <header class="header shadow-md">
         <div class="header__block header__block_switcher">
             <label class="input__type_checkbox-label">
@@ -23,5 +23,27 @@
             <input class="header__input" type="text" placeholder="Search Country">
         </div>
     </header>
+    <main class="main">
+        <div class="main__section main__section_map">
+            <div class="main__section_map-stats">
+                <div class="stats__row">
+                    <h3>Total</h3><br>
+                    <h2 class="stats__row_number stats__row-total">0</h2></div>
+                <div class="stats__row">
+                    <h3 class="stats__row-name-active_cases">Country - Active Cases</h3><br>
+                    <h2 class="stats__row_number stats__row-active_cases">0</h2></div>
+                <div class="stats__row">
+                    <h3 class="stats__row-name-new_cases">Country - New Cases</h3><br>
+                    <h2 class="stats__row_number stats__row-new_cases">0</h2></div>
+                <div class="stats__row">
+                    <h3 class="stats__row-name-deaths_cases">Country - Deaths</h3><br>
+                    <h2 class="stats__row_number stats__row-deaths">0</h2></div>
+                <div class="stats__row">
+                    <h3>Recover / Deaths</h3><br>
+                    <h2 class="stats__row_number stats__row-chanses">0</h2></div>
+            </div>
+            <div id="map" class="main__section_map-map"></div>
+        </div>
+    </main>
 </body>
 </html>

@@ -1,0 +1,19 @@
+.main__section_map {
+    display: flex;
+    height: 55rem;
+
+    &-stats {
+        width: 25rem;
+        display: flex;
+        flex-direction: column;
+        background-color: peru;
+    }
+
+    &-map {
+        flex-grow: 1;
+    }
+}
+
+#map {
+    -webkit-filter: var(--invert); /* Chrome 19+ & Safari 6+ */
+}

@@ -26,6 +26,7 @@ body {
     top: 100%;
     left: 100%;
     animation: opacity .3s;
+    z-index: 3;
 
     &_row {
         border-bottom: 2px solid black;
@@ -40,6 +41,14 @@ body {
             border: 2px solid var(--primary-color);
         }
     }
+}
+
+:root {
+    --invert: invert(0%);
+}
+
+[data-theme="dark"] {
+    --invert: invert(200%);
 }
 
 @keyframes opacity {
