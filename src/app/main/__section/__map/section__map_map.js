@@ -21,7 +21,6 @@ function init() {
     var IconContentLayoutHover = ymaps.templateLayoutFactory.createClass(
         '<div class="mark_hover">' +
         '$[properties.balloonHeader]' +
-        '$[properties.balloonContent]' +
         '</div>'
     );
 
@@ -143,13 +142,16 @@ function init() {
     const renderMarks = async () => {
         const data = await new getStatisticData();
         const resData = await data.byTotalCases();
-        for (let i = 0; i < 200; i++) {
+        for (let i = 0; i < 100; i++) {
             let coord = await func(resData[i].country);
             if (coord) {
                 var myPlacemarkWithContent = new ymaps.Placemark([coord[1], coord[0]], {
                     iconContent: `${resData[i].cases.total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")}`,
-                    balloonHeader: `${resData[i].country}`,
-                    balloonContent: '<div>Hello there</div>'
+                    balloonHeader: 
+                    '<div>' +
+                        `<h1>${resData[i].country}</h1>` +
+                        `<h1>${resData[i].cases.new}</h1>` +
+                    '</div>',
                 }, {
                     iconLayout: 'default#imageWithContent',
                     iconImageHref: '',
@@ -159,21 +161,23 @@ function init() {
                     iconImageOffset: [-50, -45],
                     // Смещение слоя с содержимым относительно слоя с картинкой.
                     iconContentLayout: IconContentLayout,
-                    balloonLayout: MyBalloonLayout,
-                    balloonContentLayout: MyBalloonContentLayout,
-                    balloonPanelMaxMapArea: 0,
-                    balloonOffset: [-50, -50]
                 });
                 let time;
                 myPlacemarkWithContent.events
+                    .add('click', function(e) {
+                        e.get('target').options.set('iconContentLayout', IconContentLayoutHover);
+                        e.get('target').options.set('iconImageSize', [170, 170])
+                    })
                     .add('mouseenter', function (e) {
                         time = setInterval(() => {
                             e.get('target').options.set('iconContentLayout', IconContentLayoutHover);
-                        }, 700)
+                        }, 500)
+                        e.get('target').options.set('iconImageSize', [170, 170])
                     })
                     .add('mouseleave', function (e) {
                         clearInterval(time);
                         e.get('target').options.set('iconContentLayout', IconContentLayout);
+                        e.get('target').options.set('iconImageSize', [65, 65])
                     });
                 myMap.geoObjects.add(myPlacemarkWithContent);
             }
