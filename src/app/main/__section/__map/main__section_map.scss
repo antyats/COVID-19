@@ -1,6 +1,6 @@
 .main__section_map {
     display: flex;
-    height: 55rem;
+    height: 60rem;
 
     &-stats {
         width: 25rem;
@@ -16,4 +16,55 @@
 
 #map {
     -webkit-filter: var(--invert); /* Chrome 19+ & Safari 6+ */
+}
+
+.mark {
+    background-color: rgba(red, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    color: #ffffff;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 100%;
+    opacity: 1;
+    animation: opacity .3s ease;
+
+    &_hover {
+        background-color: red;
+        color: #ffffff;
+        width: 17rem;
+        height: 17rem;
+        opacity: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.4rem;
+        animation: opacity .3s;
+    }
+}
+
+.container {
+    background-color: red;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.close {
+    width: 4rem;
+    height: 4rem;
+    background-color: red;
+    border-radius: 100%;
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

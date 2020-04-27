@@ -47,8 +47,7 @@ class getStatisticData {
             return b.cases.total - a.cases.total
         });
 
-        const sortedData = this.data.filter(({ country }) => country != 'All' && country != 'Asia' && country != 'Europe' && country != 'North-America');
-
+        const sortedData = this.data.filter(({ country }) => country != 'All' && country != 'Asia' && country != 'Europe' && country != 'North-America' && country != 'South-America');
         return sortedData
     }
 
