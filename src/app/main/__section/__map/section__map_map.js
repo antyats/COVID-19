@@ -153,19 +153,19 @@ function init() {
                             `<h2>${resData[i].country}</h2>` +
                         '</div>' +
                         '<div class="placemark_info-cases">' + 
-                            `<h3>New cases: <span>${resData[i].cases.new}</span></h3>` +
+                            `<h3>New cases: <span>${resData[i].cases.new.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")}</span></h3>` +
                         '</div>' +
                         '<div class="placemark_info-cases">' + 
-                            `<h3>Critical cases: <span>${resData[i].cases.critical}</span></h3>` +
+                            `<h3>Critical cases: <span>${resData[i].cases.critical.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")}</span></h3>` +
                         '</div>' +
                         '<div class="placemark_info-cases">' + 
-                            `<h3>Total cases: <span>${resData[i].cases.total}</span></h3>` +
+                            `<h3>Total cases: <span>${resData[i].cases.total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")}</span></h3>` +
                         '</div>' +
                         '<div class="placemark_info-cases">' + 
-                            `<h3>Recovered: <span>${resData[i].cases.recovered}</span></h3>` +
+                            `<h3>Recovered: <span>${resData[i].cases.recovered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")}</span></h3>` +
                         '</div>' +
                         '<div class="placemark_info-cases">' + 
-                            `<h3>Deaths: <span>${resData[i].deaths.total}</span></h3>` +
+                            `<h3>Deaths: <span>${resData[i].deaths.total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")}</span></h3>` +
                         '</div>' +
                     '</div>',
                 }, {

@@ -18,6 +18,9 @@
     // MAIN
     --stats-border-color: #3f72af;
     --stats-text-color: #ffffff;
+
+    // MAP 
+    --mark-color: rgba(red, .5);
 }
 
 [data-theme="dark"] {
@@ -40,4 +43,7 @@
     //MAIN
     --stats-border-color: #ffac41;
     --stats-text-color: #ffac41;
+
+    // MAP 
+    --mark-color: rgba(orange, .5);
 }

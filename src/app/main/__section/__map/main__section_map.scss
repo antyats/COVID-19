@@ -48,11 +48,6 @@
     }
 }
 
-
-.text-white {
-    color: #ffffff;
-}
-
 .placemark_info {
 
     width: 100%;
@@ -72,6 +67,34 @@
     &-cases {
         padding: .8rem;
         border-bottom: 2px solid var(--form-list-hover-border);
+    }
+}
+
+[data-theme="dark"] {
+    .mark {
+        background-color: rgba(0, 83, 190, .8);
+        color: #000000;
+    
+        &_hover {
+            background-color: rgb(221,215,206);
+        }
+    }
+
+    .placemark_info {
+
+        width: 100%;
+    
+        span {
+            border: 2px solid rgb(0, 83, 190);
+        }
+    
+        &-country {
+            background-color: rgb(0, 83, 190);
+        }
+    
+        &-cases {
+            border-bottom: 2px solid rgb(0, 83, 190);
+        }
     }
 }
 
