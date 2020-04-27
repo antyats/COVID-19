@@ -20,7 +20,7 @@ function init() {
 
     var IconContentLayoutHover = ymaps.templateLayoutFactory.createClass(
         '<div class="mark_hover">' +
-        '$[properties.balloonHeader]' +
+            '$[properties.balloonHeader]' +
         '</div>'
     );
 
@@ -148,9 +148,25 @@ function init() {
                 var myPlacemarkWithContent = new ymaps.Placemark([coord[1], coord[0]], {
                     iconContent: `${resData[i].cases.total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")}`,
                     balloonHeader: 
-                    '<div>' +
-                        `<h1>${resData[i].country}</h1>` +
-                        `<h1>${resData[i].cases.new}</h1>` +
+                    '<div class="placemark_info">' +
+                        '<div class="placemark_info-cases">' + 
+                            `<h2>${resData[i].country}</h2>` +
+                        '</div>' +
+                        '<div class="placemark_info-cases">' + 
+                            `<h3>New cases: <span>${resData[i].cases.new}</span></h3>` +
+                        '</div>' +
+                        '<div class="placemark_info-cases">' + 
+                            `<h3>Critical cases: <span>${resData[i].cases.critical}</span></h3>` +
+                        '</div>' +
+                        '<div class="placemark_info-cases">' + 
+                            `<h3>Total cases: <span>${resData[i].cases.total}</span></h3>` +
+                        '</div>' +
+                        '<div class="placemark_info-cases">' + 
+                            `<h3>Recovered: <span>${resData[i].cases.recovered}</span></h3>` +
+                        '</div>' +
+                        '<div class="placemark_info-cases">' + 
+                            `<h3>Deaths: <span>${resData[i].deaths.total}</span></h3>` +
+                        '</div>' +
                     '</div>',
                 }, {
                     iconLayout: 'default#imageWithContent',
