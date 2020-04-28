@@ -70,6 +70,18 @@
     }
 }
 
+.clusterIcon {
+    background-color: rgba(red, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    color: #ffffff;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 100%;
+}
+
 [data-theme="dark"] {
     .mark {
         background-color: rgba(0, 83, 190, .8);
