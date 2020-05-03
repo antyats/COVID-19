@@ -1,3 +1,19 @@
 .button {
     padding: 1.5rem;
 }
+
+.btn-up {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    width: 7rem;
+    height: 7rem;
+    position: fixed;
+    align-self: flex-end;
+    top: 80rem;
+    right: 10rem;
+    border-radius: 10px;
+    border: none;
+    display: none;
+    animation: opacity 0.3s;
+    cursor: pointer;
+}

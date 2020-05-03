@@ -31,11 +31,18 @@ const setTheme = (trigger, light_img, dark_img) => {
     document.documentElement.setAttribute('data-theme', startTheme);
     // По клику триггер проверяет состояние чекбокса -> меняет тему и иконку в зависимости от него
     trig.addEventListener('change', function(e) {
+        let tl = gsap.timeline();
         if (e.target.checked) {
-            document.documentElement.setAttribute('data-theme', 'dark');
+            tl
+            .to('body', { duration: 1, backgroundColor: '#222831', opacity: 0 })
+            .to('html', { duration: .1, attr: { 'data-theme': 'dark' }})
+            .to('body', { duration: .5, opacity: 1 })
+            // document.documentElement.setAttribute('data-theme', 'dark');
         } else {
-            document.documentElement.setAttribute('data-theme', 'light');
-        }
+            tl
+            .to('body', { duration: 1, backgroundColor: '#eaeaea', opacity: 0 })
+            .to('html', { duration: .1, attr: { 'data-theme': 'light' }})
+            .to('body', { duration: .5, opacity: 1 })        }
     });
     // По клику на ПКМ открывается контекстное меню
     trig.addEventListener('contextmenu', function(e) {

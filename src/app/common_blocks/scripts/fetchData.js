@@ -11,6 +11,19 @@ const getCountriesName = async(country) => {
     return countries.response
 }
 
+
+const getHistoryCountry = async(country) => {
+    const data = await fetch(`https://covid-193.p.rapidapi.com/history?country=${country}`, {
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "covid-193.p.rapidapi.com",
+            "x-rapidapi-key": "94223174a6msh7c4d84170319392p11a87fjsn892ad82fdb05"
+        }
+    });
+    const countries = await data.json();
+    return countries.response
+}
+
 // Получает все данные по всем странам в неотсортированном виде
 const getData = async() => {
     const data = await fetch("https://covid-193.p.rapidapi.com/statistics", {
@@ -23,7 +36,6 @@ const getData = async() => {
     const res = await data.json();
     return res.response
 }
-
 
 // Класс, в котором представлены все сортировки данных
 class getStatisticData {
@@ -78,4 +90,4 @@ class getStatisticData {
 }
 
 
-export { getCountriesName, getStatisticData }
+export { getCountriesName, getStatisticData, getHistoryCountry }

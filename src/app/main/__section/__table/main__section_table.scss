@@ -1,0 +1,76 @@
+.main__section_table {
+    margin-top: 10rem;
+}
+.main__table {
+    width: 120rem;
+    margin-top: 1rem;
+    background-color: var(--primary-color);
+    position: relative;
+
+    &_head-row {
+        background-color: var(--primary-color);
+
+        & > th {
+            padding: 1rem;
+            color: white;
+            font-size: 2rem;
+            border: 1px solid var(--secondary-color);
+        }
+    }
+
+    &_body-row {
+        background-color: var(--secondary-color);
+        text-align: center;
+        font-size: 2rem;
+        color: white;
+        
+        &:hover {
+            background-color: var(--table-row-hover);
+        }
+
+        & > td {
+            height: 6rem;
+            &:hover {
+                background-color: var(--input-checkbox-color);
+            }
+        }
+    }
+}
+
+.fixed_table {
+    position: fixed;
+    top: 0;
+    width: 120rem;
+
+    & > th:first-of-type {
+        width: 34.4rem;
+    }
+
+    & > th:nth-of-type(2) {
+        width: 13.8rem;
+    }
+
+    & > th:nth-of-type(3) {
+        width: 11.4rem;
+    }
+
+    & > th:nth-of-type(4) {
+        width: 13.9rem;
+    }
+
+    & > th:nth-of-type(5) {
+        width: 9.6rem;
+    }
+
+    & > th:nth-of-type(6) {
+        width: 9.7rem;
+    }
+
+    & > th:nth-of-type(7) {
+        width: 11.4rem;
+    }
+
+    & > th:nth-of-type(8) {
+        width: 13.9rem;
+    }
+}

@@ -12,7 +12,12 @@ const setDefultThemeButtons = (modal) => {
         // Удаляет засветление других div
         doBackgroundUsual();
         // Меняет тему на выбранную, как дефотную
-        document.documentElement.setAttribute('data-theme', theme);
+        let background = theme === 'light' ? '#eaeaea' : '#222831';
+        const tl = gsap.timeline();
+        tl
+        .to('body', { duration: 1, backgroundColor: `${background}`, opacity: 0 })
+        .to('html', { duration: .1, attr: { 'data-theme': `${theme}` }})
+        .to('body', { duration: .5, opacity: 1 })
     }
 
     btn_light.addEventListener('click', () => setThemeToMemory('light'));

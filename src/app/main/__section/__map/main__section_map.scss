@@ -1,113 +1,124 @@
-.main__section_map {
-    display: flex;
-    height: 60rem;
-
-    &-stats {
-        width: 25rem;
-        display: flex;
-        flex-direction: column;
-        background-color: peru;
-    }
-
-    &-map {
-        flex-grow: 1;
-    }
-}
-
-#map {
-    -webkit-filter: var(--invert); /* Chrome 19+ & Safari 6+ */
-}
-
-.mark {
-    background-color: rgba(red, .5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.4rem;
-    color: #ffffff;
-    width: 6rem;
-    height: 6rem;
-    border-radius: 100%;
-    opacity: 1;
-    animation: opacity .3s ease;
-
-    &_hover {
-        background-color: var(--primary-color);
-        color: var(--text-color);
-        width: 22rem;
-        height: 25rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        flex: 1;
-        border-radius: 10px;
-        opacity: 1;
-        font-size: 1.4rem;
-        animation: opacity .3s;
-    }
-}
-
-.placemark_info {
-
-    width: 100%;
-
-    span {
-        padding: .8rem;
-        border: 2px solid var(--form-list-hover-border);
-        border-radius: 5px;
-        font-size: 1.7rem;
-    }
-
-    &-country {
-        padding: 1rem;
-        background-color: var(--secondary-color);
-    }
-
-    &-cases {
-        padding: .8rem;
-        border-bottom: 2px solid var(--form-list-hover-border);
-    }
-}
-
-.clusterIcon {
-    background-color: rgba(red, .8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.6rem;
-    color: #ffffff;
-    width: 7rem;
-    height: 7rem;
-    border-radius: 100%;
-}
-
-[data-theme="dark"] {
-    .mark {
-        background-color: rgba(0, 83, 190, .8);
-        color: #000000;
-    
-        &_hover {
-            background-color: rgb(221,215,206);
+@media (min-width: 300px) {
+    .main__section_map {
+        &-map {
+            display: none;
         }
     }
+}
 
+@media (min-width: 600px) {
+    .main__section_map {
+        display: flex;
+        height: 60rem;
+    
+        &-stats {
+            width: 25rem;
+            display: flex;
+            flex-direction: column;
+            background-color: peru;
+        }
+    
+        &-map {
+            display: block;
+            flex-grow: 1;
+        }
+    }
+    
+    #map {
+        -webkit-filter: var(--invert); /* Chrome 19+ & Safari 6+ */
+    }
+    
+    .mark {
+        background-color: rgba(red, .5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.4rem;
+        color: #ffffff;
+        width: 6.5rem;
+        height: 6.5rem;
+        border-radius: 100%;
+        opacity: 1;
+        animation: opacity .3s ease;
+    
+        &_hover {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            width: 22rem;
+            height: 25rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            border-radius: 10px;
+            opacity: 1;
+            font-size: 1.4rem;
+            animation: opacity .3s;
+        }
+    }
+    
     .placemark_info {
-
+    
         width: 100%;
     
         span {
-            border: 2px solid rgb(0, 83, 190);
+            padding: .8rem;
+            border: 2px solid var(--form-list-hover-border);
+            border-radius: 5px;
+            font-size: 1.7rem;
         }
     
         &-country {
-            background-color: rgb(0, 83, 190);
+            padding: 1rem;
+            background-color: var(--secondary-color);
         }
     
         &-cases {
-            border-bottom: 2px solid rgb(0, 83, 190);
+            padding: .8rem;
+            border-bottom: 2px solid var(--form-list-hover-border);
         }
     }
+    
+    .clusterIcon {
+        background-color: rgba(red, .8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.6rem;
+        color: #ffffff;
+        width: 7rem;
+        height: 7rem;
+        border-radius: 100%;
+    }
+    
+    [data-theme="dark"] {
+        .mark {
+            background-color: rgba(0, 83, 190, .8);
+            color: #000000;
+        
+            &_hover {
+                background-color: rgb(221,215,206);
+            }
+        }
+    
+        .placemark_info {
+    
+            width: 100%;
+        
+            span {
+                border: 2px solid rgb(0, 83, 190);
+            }
+        
+            &-country {
+                background-color: rgb(0, 83, 190);
+            }
+        
+            &-cases {
+                border-bottom: 2px solid rgb(0, 83, 190);
+            }
+        }
+    } 
 }
 
 @keyframes opacity {
