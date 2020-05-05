@@ -3,7 +3,7 @@ import {
 } from "../../../../common_blocks/scripts/fetchData";
 import Chart from 'chart.js';
 
-// Переделать, очень тупил
+// Переделать, очень тупо
 const getTotalHistoryCases = async() => {
     const data = await getHistoryCountry('usa');
     const data2 = await getHistoryCountry('russia');
@@ -12,8 +12,6 @@ const getTotalHistoryCases = async() => {
     const data5 = await getHistoryCountry('sweden');
     
     const dates = [], usaStats = [], russiaStats = [], italyStats = [], germanyStats = [], swedenStats = [];
-
-
 
     for (let i = 0; i < data.length-1; i++) {
         if (data[i].day.slice(-2) !== data[i+1].day.slice(-2)) {

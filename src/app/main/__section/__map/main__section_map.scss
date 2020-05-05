@@ -16,6 +16,12 @@
             display: flex;
             flex-direction: column;
             background-color: peru;
+
+            &-country {
+                margin-top: 5rem;
+                width: 100%;
+                flex-direction: row;
+            }
         }
     
         &-map {

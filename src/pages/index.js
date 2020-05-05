@@ -34,7 +34,7 @@ import '../app/header/__switcher/header__switcher_buttons/header__block_switcher
 
 // MAIN
 import '../app/main/__section/__map/main__section_map.scss';
-// import '../app/main/__section/__map/section__map_map';
+import '../app/main/__section/__map/section__map_map';
 
 import '../app/main/__section/__map/__stats/section__map_stats.scss';
 import '../app/main/__section/__map/__stats/section__map_stats';
@@ -48,3 +48,12 @@ import '../app/main/__section/__table/main__section_table.scss';
 import '../app/common_blocks/form/__search/__search_table/search_table.scss';
 import '../app/main/__section/__table/main__section_table';
 import '../app/common_blocks/form/__search/__search_table/search_table';
+
+import '../app/main/__section/__country/section__country.scss';
+import '../app/main/__section/__country/section__country';
+
+// ROUTES
+import '../app/common_blocks/scripts/homePage';
+
+// FOOTER
+import '../app/footer/footer.scss';

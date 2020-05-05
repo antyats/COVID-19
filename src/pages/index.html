@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=a712e72d-d189-4c89-a4e8-4e14a748b2c4&lang=en" type="text/javascript"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script> -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=a712e72d-d189-4c89-a4e8-4e14a748b2c4&lang=en" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/ScrollToPlugin.min.js"></script>
     <title>Covid-19</title>
@@ -20,7 +20,7 @@
             </label>
         </div>
         <div class="header__block header__block_title">
-            <h1>COVID-19</h1>
+            <h1><a class="title" href="">COVID-19</a></h1>
         </div>
         <div class="header__block header__block_search">
             <input class="header__input" type="text" placeholder="Search Country">
@@ -86,6 +86,55 @@
                     </tbody>
                 </table>
             </section>
+            <footer class="footer">
+                <h1>It is made by Anton Yatsenko</h1>
+            </footer>
         </main>
+        <section class="country">
+            <h1 class="country__name">Country Name</h1>
+                <div class="main__section_map-stats main__section_map-stats-country">
+                    <div class="stats__row stats__row-country">
+                        <h3>Total</h3><br>
+                        <h2 class="stats__row_number stats__row-total stats__row-total-country">0</h2>
+                    </div>
+                    <div class="stats__row stats__row-country">
+                        <h3 class="stats__row-name-active_cases">Active Cases</h3><br>
+                        <h2 class="stats__row_number stats__row-active_cases stats__row-active_cases-country">0</h2>
+                    </div>
+                    <div class="stats__row stats__row-country">
+                        <h3 class="stats__row-name-new_cases">New Cases</h3><br>
+                        <h2 class="stats__row_number stats__row-new_cases stats__row-new_cases-country">0</h2>
+                    </div>
+                    <div class="stats__row stats__row-country">
+                        <h3 class="stats__row-name-deaths_cases">Deaths</h3><br>
+                        <h2 class="stats__row_number stats__row-deaths stats__row-deaths-country">0</h2>
+                    </div>
+                    <div class="stats__row stats__row-country">
+                        <h3>Tests</h3><br>
+                        <h3 class="stats__row_number stats__row-chanses stats__row-chanses-country">0</h3>
+                    </div>
+            </div>
+            <div class="main__section main__section_graphs">
+                <h1 class="main__section_graphs-title">STATISTIC</h1>
+                <div class="main__section_section-main-graph">
+                    <div class="main__graph">
+                        <h1 style="text-align: center; padding: 1rem; color: white;">Total Cases</h1>
+                        <canvas id="myChartCountry1" height="500" width="1050"></canvas>
+                    </div>
+                    <div class="main__graph">
+                        <h1 style="text-align: center; padding: 1rem; color: white;">New Cases</h1>
+                        <canvas id="myChartCountry2" height="500" width="1050"></canvas>
+                    </div>
+                    <div class="main__graph">
+                        <h1 style="text-align: center; padding: 1rem; color: white;">Recovers and Deaths</h1>
+                        <canvas id="myChartCountry3" height="500" width="1050"></canvas>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                <h1><a class="title" href="">On Home Page</a></h1>
+            </footer>
+                <button class="button btn-up btn-up-country">UP</button>
+        </section>
     </body>
 </html>

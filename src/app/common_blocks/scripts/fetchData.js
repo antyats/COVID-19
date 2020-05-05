@@ -37,6 +37,18 @@ const getData = async() => {
     return res.response
 }
 
+const getCountryData = async(country) => {
+    const data = await fetch(`https://covid-193.p.rapidapi.com/statistics?country=${country}`, {
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "covid-193.p.rapidapi.com",
+            "x-rapidapi-key": "94223174a6msh7c4d84170319392p11a87fjsn892ad82fdb05"
+        }
+    });
+    const res = await data.json();
+    return res.response
+}
+
 // Класс, в котором представлены все сортировки данных
 class getStatisticData {
 
@@ -90,4 +102,4 @@ class getStatisticData {
 }
 
 
-export { getCountriesName, getStatisticData, getHistoryCountry }
+export { getCountriesName, getStatisticData, getHistoryCountry, getCountryData }

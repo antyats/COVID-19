@@ -12,6 +12,17 @@
         width: 120rem;
         font-size: 1.7rem;
         background-color: var(--secondary-color);
+
+        & > h1 > a {
+            text-decoration: none;
+            list-style: none;
+            color: #ffffff;
+
+            &:hover {
+                padding: 1rem;
+                background-color: var(--primary-color);
+            }
+        }
     }
 
     &_search {
